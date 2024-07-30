@@ -5,7 +5,6 @@ const productSchema = new mongoose.Schema(
     name: {
       type: String,
       required: true,
-      unique: true,
     },
     slug: {
       type: String,
@@ -16,12 +15,12 @@ const productSchema = new mongoose.Schema(
       required: true,
     },
     price: {
-      type: String,
+      type: Number,
       required: true,
     },
     category: {
       type: mongoose.ObjectId,
-      ref: "category",
+      ref: "Category",
       required: true,
     },
     quantity: {
@@ -29,7 +28,7 @@ const productSchema = new mongoose.Schema(
       required: true,
     },
     photo: {
-      type: Buffer,
+      data: Buffer,
       contentType: String,
     },
     shipping: {
@@ -39,4 +38,4 @@ const productSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-export default mongoose.model("products", productSchema);
+export default mongoose.model("Products", productSchema);
