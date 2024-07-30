@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import Layout from "../../components/layout/Layout";
 import AdminMenu from "../../components/layout/AdminMenu";
+import CategoryForm from "../../components/From/CategoryForm";
 
 const CreateCategory = () => {
   const [categories, setCategories] = useState([]);
@@ -25,7 +26,7 @@ const CreateCategory = () => {
       }
     } catch (error) {
       console.log(error);
-      // toast.error("somthing went wrong in input form");
+      toast.error("somthing went wrong in input form");
     }
   };
 
@@ -94,11 +95,11 @@ const CreateCategory = () => {
           <div className="col-md-9">
             <h1>Manage Category</h1>
             <div className="p-3 w-50">
-              {/* <CategoryForm
-              handleSubmit={handleSubmit}
-              value={name}
-              setValue={setName}
-            /> */}
+              <CategoryForm
+                handleSubmit={handleSubmit}
+                value={name}
+                setValue={setName}
+              />
             </div>
             <div className="w-75">
               <table className="table">
