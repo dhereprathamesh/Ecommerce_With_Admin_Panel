@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import toast from "react-hot-toast";
+import { Modal } from "antd";
 import Layout from "../../components/layout/Layout";
 import AdminMenu from "../../components/layout/AdminMenu";
 import CategoryForm from "../../components/From/CategoryForm";
@@ -140,17 +141,17 @@ const CreateCategory = () => {
                 </tbody>
               </table>
             </div>
-            {/* <Modal
-            onCancel={() => setVisible(false)}
-            footer={null}
-            visible={visible}
-          >
-            <CategoryForm
-              value={updatedName}
-              setValue={setUpdatedName}
-              handleSubmit={handleUpdate}
-            />
-          </Modal> */}
+            <Modal
+              onCancel={() => setVisible(false)}
+              footer={null}
+              visible={visible}
+            >
+              <CategoryForm
+                value={updatedName}
+                setValue={setUpdatedName}
+                handleSubmit={handleUpdate}
+              />
+            </Modal>
           </div>
         </div>
       </div>

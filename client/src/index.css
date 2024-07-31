@@ -1,12 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,400;1,300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* font-family: "Poppins", sans-serif;
-font-family: "Playfair Display", serif; */
+/* font-family: 'Poppins', sans-serif; */
+/* font-family: 'Playfair Display', serif; */
 
 /* //navbar css */
 .navbar {
@@ -33,6 +34,19 @@ font-family: "Playfair Display", serif; */
   letter-spacing: 3px;
 }
 
+.search-form {
+  margin-right: 10px;
+  margin-top: 4px;
+}
+.search-form input {
+  border: none;
+  border-radius: 0;
+}
+.search-form button {
+  background-color: #000000;
+  border-radius: 0;
+  color: white;
+}
 
 /* =============================
 ==========footer============= */
@@ -59,7 +73,6 @@ font-family: "Playfair Display", serif; */
   color: #ffefba;
   border-bottom: 1px solid #ffefba;
 }
-
 /* =================================
 ======== page not found css ======= */
 .pnf {
@@ -90,7 +103,6 @@ font-family: "Playfair Display", serif; */
   background-color: black;
   color: white;
 }
-
 /* ========================================= */
 /* =========contact us ========= */
 .contactus {
@@ -100,4 +112,33 @@ font-family: "Playfair Display", serif; */
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* ==================== */
+.product-link {
+  text-decoration: none !important;
+  color: black !important;
+}
+
+.cat-btn {
+  padding: 40px 0px;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+.cat-btn:hover {
+  background-color: #434343;
+  color: white;
+}
+/* ================
+====dashboard
+=================== */
+
+.dashboard {
+  margin-top: 100px !important;
+}
+
+.dashboard-menu h4 {
+  background-color: #434343 !important;
+  color: white;
+  padding: 20px 0px;
 }
