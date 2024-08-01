@@ -4,7 +4,7 @@ import Layout from "../components/layout/Layout";
 const Policy = () => {
   return (
     <Layout title={"Privacy Policy"}>
-      <div className="row contactus">
+      <div className="row contactus" style={{ marginTop: "50px" }}>
         <div className="col-md-6">
           <img
             src="/images/contactus.jpeg"

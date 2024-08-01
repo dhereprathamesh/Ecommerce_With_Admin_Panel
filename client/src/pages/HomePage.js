@@ -6,12 +6,12 @@ import { Checkbox, Radio } from "antd";
 import toast from "react-hot-toast";
 import { AiOutlineReload } from "react-icons/ai";
 import "../styles/Homepage.css";
-// import { useCart } from "../context/cart";
+import { useCart } from "../context/cart";
 import { Prices } from "../components/Prices";
 
 const HomePage = () => {
   const navigate = useNavigate();
-  // const [cart, setCart] = useCart();
+  const [cart, setCart] = useCart();
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
   const [checked, setChecked] = useState([]);
@@ -182,14 +182,14 @@ const HomePage = () => {
                     </button>
                     <button
                       className="btn btn-dark ms-1"
-                      // onClick={() => {
-                      //   setCart([...cart, p]);
-                      //   localStorage.setItem(
-                      //     "cart",
-                      //     JSON.stringify([...cart, p])
-                      //   );
-                      //   toast.success("Item Added to cart");
-                      // }}
+                      onClick={() => {
+                        setCart([...cart, p]);
+                        localStorage.setItem(
+                          "cart",
+                          JSON.stringify([...cart, p])
+                        );
+                        toast.success("Item Added to cart");
+                      }}
                     >
                       ADD TO CART
                     </button>

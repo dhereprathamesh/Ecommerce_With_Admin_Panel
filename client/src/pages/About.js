@@ -4,7 +4,7 @@ import Layout from "../components/layout/Layout";
 const About = () => {
   return (
     <Layout title={"About us - Ecommer app"}>
-      <div className="row contactus ">
+      <div className="row contactus " style={{ marginTop: "50px" }}>
         <div className="col-md-6 ">
           <img
             src="/images/about.jpeg"

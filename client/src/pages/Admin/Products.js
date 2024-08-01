@@ -1,9 +1,9 @@
-import { Layout } from "antd";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import AdminMenu from "../../components/layout/AdminMenu";
 import { Link } from "react-router-dom";
+import Layout from "../../components/layout/Layout";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -18,13 +18,14 @@ const Products = () => {
       toast.error("Someething Went Wrong");
     }
   };
+
   //lifecycle method
   useEffect(() => {
     getAllProducts();
   }, []);
   return (
     <Layout>
-      <div className="row dashboard">
+      <div className="row dashboard" style={{ width: "99% important" }}>
         <div className="col-md-3">
           <AdminMenu />
         </div>
